@@ -27,7 +27,7 @@ urlpatterns = [
 
     path('customer-list/', views.customerListView, name= 'customer_list'),
     path('admin-list/', views.adminListView, name= 'admin_list'),
-    path('admin-request_list/', views.AdminRequestListView.as_view(), name= 'admin_request_list'),
+    path('admin-request-list/', views.AdminRequestListView.as_view(), name= 'admin_request_list'),
 
 
 ]
