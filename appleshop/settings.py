@@ -169,3 +169,11 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 # Razorpay API credentials
 RAZORPAY_API_KEY = config('RAZORPAY_API_KEY')
 
+# Twilio API credentials
+# (find here https://www.twilio.com/console)
+TWILIO_ACCOUNT_SID = config('TWILIO_ACCOUNT_SID')
+TWILIO_AUTH_TOKEN = config('TWILIO_AUTH_TOKEN')
+
+# Verification Service SID
+# (create one here https://www.twilio.com/console/verify/services)
+VERIFICATION_SID = config('VERIFICATION_SID')
