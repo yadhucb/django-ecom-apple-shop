@@ -3,6 +3,6 @@ from. import views
 app_name = 'offers'
 
 urlpatterns = [
-    path('apply_coupon/', views.apply_coupon, name='apply_coupon'),
-    path('remove_coupon/', views.remove_coupon, name='remove_coupon'),
+    path('apply-coupon/', views.apply_coupon, name='apply_coupon'),
+    path('remove-coupon/', views.remove_coupon, name='remove_coupon'),
 ]
