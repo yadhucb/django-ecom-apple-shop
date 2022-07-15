@@ -10,11 +10,14 @@
             <hr>
             <div class="container-fluid">
                 <div class="row d-flex ">
+
                     <div class="col-2 col-md-2">
                         <img src="{{ order.image.url}}" width="100%" alt="Product image">
                     </div>
                     <div class="col-12 col-md-6 px-md-3">
-                        <h3>{{order.product}}</h3>
+                        <a href="{% url 'products:product_details' order.product_id %}">
+                            <h3>{{order.product}}</h3>
+                        </a>
                         <h6 class="text-primary">
                             ₹{{order.product_selling_price | stringformat:'d'}} x {{order.qty}}
                         </h6>
