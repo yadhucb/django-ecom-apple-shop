@@ -3,7 +3,7 @@ $(document).ready(function () {
     var token = $('input[name=csrfmiddlewaretoken]').val()
     $.ajax({
         method: 'POST',
-        url: '/super_admin/',
+        url: '/super-admin/',
         data: {
             csrfmiddlewaretoken: token
 

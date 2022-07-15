@@ -24,6 +24,5 @@ theme_btn.addEventListener('click', () => {
 
 var navToggler = document.querySelector('#nav-toggler-btn')
 navToggler.addEventListener('click', () => {
-    console.log('clickkkkkkkkkkkk')
     document.body.classList.toggle('sidebar-icon-only')
 })

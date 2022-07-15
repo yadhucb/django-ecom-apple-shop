@@ -10,7 +10,7 @@ $(document).ready(function () {
 
         $.ajax({
             method: 'POST',
-            url: '/cart/add_to_cart/',
+            url: '/cart/add-to-cart/',
             data: {
                 'product_id': product_id,
                 csrfmiddlewaretoken: token
@@ -38,7 +38,7 @@ $(document).ready(function () {
 
         $.ajax({
             method: 'POST',
-            url: '/cart/change_qty/',
+            url: '/cart/change-qty/',
             data: {
                 'product_id': product_id,
                 'quantity': quantity,
@@ -66,7 +66,7 @@ $(document).ready(function () {
 
         $.ajax({
             method: 'POST',
-            url: '/cart/change_qty/',
+            url: '/cart/change-qty/',
             data: {
                 'product_id': product_id,
                 'quantity': quantity,
@@ -156,7 +156,7 @@ $(document).ready(function () {
         var address_id = $(this).closest('.address_closest_cls').find('.address_id').val()
         $.ajax({
             method: 'POST',
-            url: '/profiles/address_delete/',
+            url: '/profiles/address-delete/',
             data: {
                 csrfmiddlewaretoken: token,
                 'address_id': address_id
@@ -178,7 +178,7 @@ $(document).ready(function () {
         address_id = $(this).closest('.address_closest_cls').find('.address_id').val()
         $.ajax({
             method: 'POST',
-            url: '/profiles/address_edit/',
+            url: '/profiles/address-edit/',
             data: {
                 csrfmiddlewaretoken: token,
                 'address_id': address_id
@@ -203,7 +203,7 @@ $(document).ready(function () {
 
         $.ajax({
             method: 'POST',
-            url: '/profiles/address_default/',
+            url: '/profiles/address-default/',
             data: {
                 csrfmiddlewaretoken: token,
                 'address_id': address_id
@@ -225,7 +225,7 @@ $(document).ready(function () {
 
         $.ajax({
             method: 'POST',
-            url: '/offers/apply_coupon/',
+            url: '/offers/apply-coupon/',
             data: {
                 csrfmiddlewaretoken: token,
                 'code': copoun_code,
@@ -259,7 +259,7 @@ $(document).ready(function () {
 
         $.ajax({
             method: 'POST',
-            url: '/offers/remove_coupon/',
+            url: '/offers/remove-coupon/',
             data: {
                 csrfmiddlewaretoken: token,
             },

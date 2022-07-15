@@ -4,16 +4,16 @@ from .forms import CustomLoginForm, CustomPasswordResetForm, CustomSetPasswordFo
 from account import views
 app_name = 'account'
 urlpatterns = [
-    path('send_otp', views.send_otp, name = 'send_otp'),
-    path('verify_otp', views.verify_otp, name ='verify_otp'),
-    path('create_account/', views.userCreationView, name='create_account' ),
+    path('send-otp', views.send_otp, name = 'send_otp'),
+    path('verify-otp', views.verify_otp, name ='verify_otp'),
+    path('create-account/', views.userCreationView, name='create_account' ),
     path('login/', auth_views.LoginView.as_view
     (template_name='user/login.html', authentication_form =CustomLoginForm ,next_page= 'home'), name= 'login' ),
     path('logout/', views.logoutView, name='logout'),
     
-    path('admin_login/', auth_views.LoginView.as_view
+    path('admin-login/', auth_views.LoginView.as_view
     (template_name='super_admin/login.html', authentication_form =CustomLoginForm ,next_page= 'super_admin:home'), name= 'admin_login' ),
-    path('admin_creation', views.AdminCreationView.as_view(), name='admin_creation'),
-    path('admin_logout', views.adminLogoutView, name='admin_logout'),
+    path('admin-creation', views.AdminCreationView.as_view(), name='admin_creation'),
+    path('admin-logout', views.adminLogoutView, name='admin_logout'),
 
 ]
