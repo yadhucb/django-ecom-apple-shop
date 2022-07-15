@@ -72,7 +72,7 @@
 
                     {% if no_of_items %}
                     <a href="{% url 'orders:cart_order' %}"><button class="btn btn-success p-2 fs-5  w-100">
-                            PLACE ORDER <span class="d-md-none ps-3">₹ {{total_amount | stringformat:'d'}}</span>
+                            CHECKOUT <span class="d-md-none ps-3">₹ {{total_amount | stringformat:'d'}}</span>
                         </button></a>
                     {% else %}
 

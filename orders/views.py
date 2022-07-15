@@ -116,7 +116,7 @@ def singleOrderView(request, pk):
         'product' : product,
         }
 
-        return render(request, 'user/order.html', context)
+        return render(request, 'user/checkout.html', context)
 
     except:
         messages.info(request, 'Add address or make sure there is a default address to continue your order')
@@ -212,9 +212,10 @@ def cartOrderView(request):
         'remove_coupon' : remove_coupon, 
         'total_amount' : total_amount, 
         'cart' : carts,
+        'special_offer' : special_offer
         }
 
-        return render(request, 'user/order.html', context)
+        return render(request, 'user/checkout.html', context)
 
     except:
         messages.info(request, 'Add address or make sure there is a default address to continue your order')
