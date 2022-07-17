@@ -29,14 +29,14 @@
                                 </td>
                                 <td> {{admin.mobile}} </td>
                                 <td> {{admin.email}} </td>
-                                <td> {{admin.gender}} </td>
+                                <td class="text-capitalize"> {{admin.gender}} </td>
                                 <td> {{admin.last_login}} </td>
                                 <td>
 
                                     <!-- Button trigger modal -->
-                                    <div type="button" class="text-capitalize" data-bs-toggle="modal"
+                                    <div type="button" class="text-capitalize text-primary" data-bs-toggle="modal"
                                         data-bs-target="#id{{admin.id}}">
-                                        Accept
+                                        Accept Request
                                     </div>
 
                                     <!-- Modal -->
@@ -54,15 +54,11 @@
                                                             aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <p> Do you want accept admin request? <br> Once accepted they
-                                                            can
-                                                            access
+                                                        <p class="mt-2 text-primary fs-5">Once accepted they can access
                                                             admin panel!</p>
 
-                                                        <label for="id_is_admin">Click the checkbox to continue</label>
-
-                                                        <input class="fs-5" type="checkbox" name="is_admin"
-                                                            id="id_is_admin">
+                                                        <input class="fs-5 d-none" type="checkbox" checked
+                                                            name="is_admin" id="id_is_admin">
 
                                                     </div>
                                                     <div class="modal-footer">
