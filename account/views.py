@@ -58,7 +58,7 @@ def userCreationView(request):
 
 def logoutView(request):
     logout(request)
-    return redirect('account:login')
+    return redirect('home')
 
 
 class AdminCreationView(View):
