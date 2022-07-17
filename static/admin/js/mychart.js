@@ -11,7 +11,6 @@ $(document).ready(function () {
         },
 
         success: function (chart_data) {
-            console.log('dataaa', chart_data)
             var order_status = chart_data.order_status
             var monthly_sale = chart_data.monthly_sale
             const orderData = {
@@ -48,10 +47,6 @@ $(document).ready(function () {
                 orderConfig
             );
 
-            console.log('order_status', order_status)
-
-
-
 
             const labels = [
                 'Sixth Last 30dys',
@@ -65,15 +60,15 @@ $(document).ready(function () {
             const data = {
                 labels: labels,
                 datasets: [{
-                    label: 'My First dataset',
-                    backgroundColor: 'rgb(255, 99, 132)',
+                    label: 'Sales in Rs',
+                    backgroundColor: 'rgb(119, 50, 168)',
                     borderColor: 'rgb(9, 156, 31)',
                     data: monthly_sale,
                 }]
             };
 
             const config = {
-                type: 'line',
+                type: 'bar',
                 data: data,
                 options: {}
             };
