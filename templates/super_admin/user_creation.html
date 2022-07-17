@@ -34,18 +34,6 @@
                     </div>
                     {% endfor %}
                     {% endif%}
-                    <!-- <form action="" method="post">
-                        {% csrf_token %}
-                        {% for form in form  %}
-                        <div class="form-group my-4">
-                            {{form}}
-                            <small class="text-danger">{{form.errors | striptags}}</small>
-                        </div>
-                    
-                        {% endfor %}
-                        <button class="btn btn-warning fw-bold fs-5 px-5 mt-5 d-grid mx-auto">REGISTER</button>
-                        <a  href="{% url 'account:login' %}"><p class="text-primary text-center fw-bold m-3"> Existing User? Log in</p></a>
-                     </form> -->
 
                     <form action="" method="post">
                         {% csrf_token %}
@@ -82,6 +70,10 @@
                             <input type="password" name="password2" class="form-control" placeholder="Confirm Password"
                                 required="" id="id_password2">
                             <small class="text-danger">{{ form.password2.errors | striptags }}</small>
+                        </div>
+                        <div class="form-group my-4 d-none">
+                            <input type="checkbox" name="is_admin_request" id="id_is_admin_request" checked>
+                            <small class="text-danger">{{ form.is_admin_request.errors | striptags }}</small>
                         </div>
 
 

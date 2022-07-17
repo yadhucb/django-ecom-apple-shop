@@ -46,14 +46,21 @@
                             <small class="text-danger">{{form.errors|striptags }}</small>
                         </div>
                         {% endfor %}
-                        <button class="btn btn-warning px-5 mt-5 fw-bold d-block mx-auto">LOGIN</button>
+
+                        <div class="row mt-3">
+                            <div class="col-lg-6 p-lg-3  ">
+                                <button type="submit" class="btn btn-warning px-5  me-auto fw-bold w-100">LOGIN</button>
+                            </div>
+                            <div class="col-lg-6 p-lg-3 mt-3 mt-lg-0">
+                                <a class="btn btn-primary px-5  fw-bold w-100"
+                                    href="{% url 'account:admin_creation' %}">
+                                    SIGNUP
+                                </a>
+                            </div>
+                        </div>
                         <a class="text-decoration-none" href="{% url 'password_reset' %}">
                             <p class="text-primary text-center m-3 fw-bold"> Forgot Password ?</p>
                         </a>
-                        <a class="" href="{% url 'account:admin_creation' %}">
-                            <p class="text-primary text-center m-3 fw-bold">Admin registeration</p>
-                        </a>
-
                     </form>
                 </div>
             </div>

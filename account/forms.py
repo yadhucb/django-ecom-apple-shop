@@ -29,7 +29,7 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta:
         model = CustomUser
-        fields = ('username', 'email', 'mobile', 'password1', 'password2' )
+        fields = ('username', 'email', 'mobile', 'password1', 'password2', 'is_admin_request' )
 
 class CustomLoginForm(AuthenticationForm):
     username = forms.IntegerField(
