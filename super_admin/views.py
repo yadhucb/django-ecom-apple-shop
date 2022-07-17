@@ -24,12 +24,10 @@ def homeView(request):
 
     # ===========chart data by ajax request======
     if request.method == 'POST':
-        order_pending = Order.objects.filter(status = 'pending').count()
         order_success = Order.objects.filter(status = 'success').count()
         order_shipped = Order.objects.filter(status = 'shipped').count()
         order_deliverd = Order.objects.filter(status = 'deliverd').count()
         order_cancelled = Order.objects.filter(status = 'cancelled').count()
-        order_return = Order.objects.filter(status = 'return').count()
 
     # ========mothly product sale=========
 
@@ -55,7 +53,7 @@ def homeView(request):
         fourth_last_month_sale = product_sale_4.get('fourth_last_month')
         fifth_last_month_sale = product_sale_5.get('fifth_last_month')
         sixth_last_month_sale = product_sale_6.get('sixth_last_month')
-        order_status = [order_pending, order_success, order_shipped, order_deliverd, order_cancelled, order_return]
+        order_status = [order_success, order_shipped, order_deliverd, order_cancelled]
         monthly_sale = [
             sixth_last_month_sale,
             fifth_last_month_sale,

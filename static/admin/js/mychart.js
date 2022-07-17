@@ -16,23 +16,23 @@ $(document).ready(function () {
             var monthly_sale = chart_data.monthly_sale
             const orderData = {
                 labels: [
-                    'Pending',
+
                     'Success',
                     'Shipped',
                     'Deliverd',
                     'Cancelled',
-                    'Return'
+
                 ],
                 datasets: [{
                     label: 'My First Dataset',
                     data: order_status,
                     backgroundColor: [
-                        'rgb(9, 88, 145',
+
                         'rgb(18, 14, 135)',
                         'rgb(205, 224, 61',
                         'rgb(9, 145, 16)',
                         'rgb(145, 7, 10)',
-                        'rgb(209, 60, 23)'
+
                     ],
                     hoverOffset: 1
                 }]

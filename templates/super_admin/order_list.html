@@ -18,8 +18,8 @@
                                 <th> Payment </th>
                                 <th> Qty</th>
                                 <th> Coupon (Rs)</th>
-                                <th> Updated</th>
                                 <th> Status</th>
+                                <th> Updated</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,7 +37,6 @@
                                 <td> {{order.payment}} </td>
                                 <td> {{order.qty}} </td>
                                 <td> {{order.coupon}} </td>
-                                <td> {{order.updated_at}} </td>
                                 <td>
 
                                     <!-- Button trigger modal -->
@@ -97,7 +96,7 @@
                                         </div>
                                     </div>
                                 </td>
-
+                                <td> {{order.updated_at}} </td>
                             </tr>
                             {% endfor %}
                         </tbody>
