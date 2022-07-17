@@ -7,7 +7,6 @@ $(document).ready(function () {
             url: '/orders/razorpay/',
             success: function (data) {
                 total_amount = (document.getElementById('total_amount').innerHTML).substring(1)
-                console.log(data.key)
                 var key = data.key
 
                 var options = {
