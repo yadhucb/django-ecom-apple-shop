@@ -23,10 +23,10 @@ def get_otp(request, mob_number):
             .services(verification_sid) \
             .verifications \
             .create(to='+91'+mob_number, channel='whatsapp')
-        messages.success(request, 'OTP successfuly sent! Please check your WhatApp')
+        messages.success(request, 'OTP successfuly sent! Please check your WhatsApp')
         return True
     except:
-        messages.info(request, 'Something went wrong')
+        messages.info(request, 'Something went wrong, free sms trial may be expired!')
         return False
 
 def check_otp(request, otp, mob_number):
