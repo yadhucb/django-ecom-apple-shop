@@ -67,7 +67,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     )
     profile_pic = models.ImageField(upload_to = 'user_pro_pic', default='default/pro_pic.png')
-    gender = models.CharField(max_length=6, choices=GENDER_CHOICES, default='Male')
+    gender = models.CharField(max_length=6, choices=GENDER_CHOICES, null=True, blank=True)
     dob = models.DateField(null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
 
